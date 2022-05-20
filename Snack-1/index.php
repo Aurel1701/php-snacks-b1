@@ -29,7 +29,7 @@ $partite = [
     [
         'casa' => 'Boston',
         'ospite' => 'New York ',
-        'scoreCasa' => 55,
+        'scoreCasa' => 80,
         'scoreOspite' => 89,
     ],
     
@@ -48,6 +48,17 @@ $partite = [
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Partite del giorno :</h1>
+     <?php
+     /* ciclo all'interno delle partite e con count restituisco il numero di elementi 
+     che ho nell'array*/
+     for ($i=0; $i < count($partite) ; $i++) { 
+         echo "<div> {$partite[$i]["casa"]}  -  {$partite[$i]["ospite"]}  {$matches[$i]["scoreCasa"]}  :  {$matches[$i]["scoreOspite"]} </div>";
+
+     }
+     
+     ?>
+
+
 </body>
 </html>
